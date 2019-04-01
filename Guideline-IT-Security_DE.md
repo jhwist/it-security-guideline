@@ -158,7 +158,7 @@ Es besteht in Europa (im Gegensatz zu den USA) auch keine Pflicht, ein spezifisc
 |C.1.a.3|Der Hersteller hat alle Märkte und alle dort relevanten regulatorischen Anforderungen festgelegt.|0|sich die Liste der regulatorischen Anforderungen mit Bezug zur IT-Sicherheit zeigen lassen|
 |C.1.a.4|Der Hersteller hat die vorgesehenen primären und sekundären Benutzer mit ihren IT-Kompetenzen festgelegt.[^C1-01]|1||
 |C.1.a.5|Der Hersteller hat die vorgesehene Nutzungsumgebung festgelegt.[^C1-02]|1||
-|C.1.a.6|Der Hersteller hat die Risiken (Gefährdung) analysiert, die folgen, wenn die nicht die spezifizierten Benutzer in der spezifizierten Benutzungsumgebung mit dem System arbeiten [^C1-03]|1||
+|C.1.a.6|Der Hersteller hat die Risiken (Gefährdung) analysiert, die folgen, wenn andere als die spezifizierten Benutzer in der spezifizierten Benutzungsumgebung mit dem System arbeiten [^C1-03]|1||
 |C.1.a.7|Der Hersteller hat im Risikomanagement beschrieben, welche Bedrohungen für die IT-Sicherheit bestehen und was die Folgen für Patienten, Anwender und Dritte wären|1||
 |C.1.a.8|Der Hersteller hat die Risikoakzeptanzkriterien nachvollziehbar aus dem Nutzen des Produkts und dem State-of-the-Art abgeleitet|1||
 |C.1.a.9|Der Hersteller hat ein System entwickelt, mit dem er IT-sicherheitsbezogene Risiken bewerten kann[^C1-04]|2||
@@ -252,7 +252,7 @@ Es besteht in Europa (im Gegensatz zu den USA) auch keine Pflicht, ein spezifisc
 
 [^C3-02]: Beispiel für von Betriebssystemen üblicherweise angebotene Dienste: Webserver, RPC, Cloud-Services, Laufwerke (z.B. USB), Datenbank, DICOM, Dienste über Socket-Verbindungen
 
-[^C3-03]: zumindest die Top-Level-Komponenten. Diese Komponenten entsprechen auch den Objekten
+[^C3-03]: zumindest die Top-Level-Komponenten. Diese Komponenten entsprechen auch den Objekten.
 
 #### d) Implementierung und Erstellung der Software
 
@@ -265,7 +265,7 @@ Es besteht in Europa (im Gegensatz zu den USA) auch keine Pflicht, ein spezifisc
 
 [^C4-01]: Beispiele sind Code-Metriken (z.B. McCabe Maß), Vorgaben zur Dokumentation / Kommentierung des Codes und zu dessen Formatierung, ebenso das Verbot unsicherer Funktionen (in C "gets", "strcopy" und [weiterer Funktion](https://msdn.microsoft.com/library/bb288454.aspx)), zudem die Pflicht mit Annotationen (z.B. [SAL](https://msdn.microsoft.com/en-us/library/ms235402.aspx)) zu verwenden, um Buffer-Overflows zu vermeiden, die Pflicht, die Übergabeparameter auch für interne Schnittstellen grundsätzlich zu überprüfen usw.
 
-[^C4-02]: Beispiele wären ein physischer Zugriffsschutz, Obfuscation von Code, Betriebssystem mit Address Space Layout Randomization. Diesen Schutz realisieren üblicherweise die Betriebssysteme
+[^C4-02]: Beispiele wären ein physischer Zugriffsschutz, Obfuscation von Code, Betriebssystem mit Address Space Layout Randomization. Diesen Schutz realisieren üblicherweise die Betriebssysteme.
 
 #### e) Bewertung von Software-Einheiten
 
@@ -290,7 +290,7 @@ Es besteht in Europa (im Gegensatz zu den USA) auch keine Pflicht, ein spezifisc
 |:--:|:--|:--:|:--|
 |C.1.f.1|Der Hersteller sieht im Testplan [^C6-01] Portscans an allen relevanten Netzwerkschnittstellen vor und führt diese auch durch.|1||
 |C.1.f.2|Der Hersteller sieht im Testplan Penetrationstests an allen relevanten Datenschnittstellen und/oder für alle bekannten Schwachstellen der eingesetzten OTS-Komponenten [^C6-02] vor und führt diese auch durch.|2|für eine bekannte OTS-Komponente in der [NIST Common / National Vulnerability Database](https://nvd.nist.gov/)  eine Schwachstelle recherchieren und vom Hersteller erklären lassen, wie er sicherstellt, dass diese nicht ausgenutzt werden kann, bzw. weshalb diese nicht relevant ist|
-|C.1.f.3|Der Hersteller sieht im Testplan den Einsatz eines "Vulerability Scanners" vor.|2||
+|C.1.f.3|Der Hersteller sieht im Testplan den Einsatz eines "Vulnerability Scanners" vor.|2||
 |C.1.f.4|Der Hersteller sieht im Testplan Fuzz-Tests an allen relevanten Datenschnittstellen mit mindestens einem Werkzeug vor und führt diese auch durch [^C6-03]|2||
 |C.1.f.5|Der Hersteller sieht im Testplan eine Überprüfung der Sicherheit gegen die üblichen Angriffsvektoren vor.[^C6-04]|2||
 |C.1.f.6|Der Hersteller sieht im Testplan die Überprüfung vor, die Robustheit und Leistungsfähigkeit zu prüfen.|2||
@@ -300,11 +300,11 @@ Es besteht in Europa (im Gegensatz zu den USA) auch keine Pflicht, ein spezifisc
 
 [^C6-01]: Dieser Plan kann Teil des Entwicklungsplans, eines V&V-Plans oder eines anderen Plans sein.
 
-[^C6-02]: Die Schwachstellen sind z.B. in der [NIST National Vulnerability Database](https://nvd.nist.gov/) (NVD) hinterlegt. Üblicherweise setzt man Scanner wie Nessus oder OpenVAS ein. Die Anforderung lautet nicht, dass beim Penetrationstest notwendigerweise alle bekannten Schwachstellen getestet werden. Die FDA fordert diese Cross Reference zwischen den "CBOMs" und der NVD expliit ein.
+[^C6-02]: Die Schwachstellen sind z.B. in der [NIST National Vulnerability Database](https://nvd.nist.gov/) (NVD) hinterlegt. Üblicherweise setzt man Scanner wie Nessus oder OpenVAS ein. Die Anforderung lautet nicht, dass beim Penetrationstest notwendigerweise alle bekannten Schwachstellen getestet werden. Die FDA fordert diese Cross Reference zwischen den "CBOMs" und der NVD explizit ein.
 
 [^C6-03]: Im Fokus beim Fuzz-Testing sollte der eigene Code stehen und weniger die OTS-Software. Der Einsatz mehrerer Scanner führt meist zu einem größeren Bereich von Input-Werten. 
 
-[^C6-04]: z.B. DoS, SQL-Injection, Cross-Site-Scripting, Directory Transversal, Buffer-Overflow, syntaktisch oder semantisch fehlerhafte Anfragen,
+[^C6-04]: z.B. DoS, SQL-Injection, Cross-Site-Scripting, Directory Traversal, Buffer-Overflow, syntaktisch oder semantisch fehlerhafte Anfragen
 
 #### g) Produktfreigabe
 
